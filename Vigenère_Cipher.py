@@ -1,10 +1,8 @@
 # Vigenère Cipher Implementation without Functions
 
-# Step 1: Input the message and the key
 message = input("Enter the message: ")
 key = input("Enter the key: ")
 
-# Step 2: Generate the full key to match the message length
 key_full = ""
 key_index = 0
 for char in message:
@@ -14,7 +12,6 @@ for char in message:
     else:
         key_full += char  # Non-alphabetic characters retain their position
 
-# Step 3: Encrypt the message
 encrypted_message = ""
 for i in range(len(message)):
     char = message[i]
@@ -25,7 +22,6 @@ for i in range(len(message)):
     else:
         encrypted_message += char  # Non-alphabetic characters remain unchanged
 
-# Step 4: Decrypt the message
 decrypted_message = ""
 for i in range(len(encrypted_message)):
     char = encrypted_message[i]
@@ -36,7 +32,6 @@ for i in range(len(encrypted_message)):
     else:
         decrypted_message += char  # Non-alphabetic characters remain unchanged
 
-# Step 5: Output the results
 print(f"Original Message: {message}")
 print(f"Encrypted Message: {encrypted_message}")
 print(f"Decrypted Message: {decrypted_message}")
